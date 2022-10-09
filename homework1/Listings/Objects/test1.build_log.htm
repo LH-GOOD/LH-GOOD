@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Erin Erin, lh, LIC=03CWF-6WK8V-KBMER-KS3Q6-RP71F-WLZIY
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  D:\keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.4.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+D:\qianrushi\homework1\Listings\test1.uvprojx
+Project File Date:  10/09/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'D:\keil\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+test1.c(17): warning: no previous prototype for function 'Delay' [-Wmissing-prototypes]
+ void Delay()
+      ^
+test1.c(17): note: declare 'static' if the function is not intended to be used outside of this translation unit
+ void Delay()
+ ^
+ static 
+test1.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA_ODR&=~(1<<4);                     //???????
+                 ~~^~~~~~~
+test1.c(32): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB_ODR&=~(1<<5);                     //???????
+                 ~~^~~~~~~
+test1.c(36): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOC_ODR&=~(1<<14);                    //???????               
+                 ~~^~~~~~~~
+test1.c(45): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOA_ODR&=~(1<<4);             //PB5???,????0,??????
+                         ~~^~~~~~~
+test1.c(52): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOB_ODR&=~(1<<5);             //PB5???,????0,??????
+                         ~~^~~~~~~
+test1.c(60): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOC_ODR&=~(1<<14);            //PB5???,????0,??????
+                         ~~^~~~~~~~
+7 warnings generated.
+compiling test1.c...
+linking...
+.\Objects\test1.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 1 error messages.
+".\Objects\test1.axf" - 1 Error(s), 7 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.1.0.pack
+                Keil.STM32F1xx_DFP.2.1.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\keil\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  D:\keil\KEIL\STM32F1xx_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
